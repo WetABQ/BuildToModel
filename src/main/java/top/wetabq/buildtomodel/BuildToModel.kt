@@ -2,12 +2,10 @@ package top.wetabq.buildtomodel
 
 import cn.nukkit.Server
 import cn.nukkit.entity.data.Skin
-import cn.nukkit.math.Vector3
 import cn.nukkit.plugin.PluginBase
 import cn.nukkit.utils.TextFormat
 import top.wetabq.buildtomodel.command.BToMCommand
 import top.wetabq.buildtomodel.listener.EventListener
-import top.wetabq.buildtomodel.task.LicenseTask
 import java.util.*
 import javax.imageio.ImageIO
 
@@ -34,7 +32,6 @@ class BuildToModel : PluginBase() {
         dskin.setSkinData(ImageIO.read(skinStream))
         skin = dskin
         Server.getInstance().commandMap.register( "${TextFormat.GOLD}[BTOM]", BToMCommand())
-        Server.getInstance().scheduler.scheduleAsyncTask(this, LicenseTask())
         logger.notice("BulidToModel Enabled ! Made by WetABQ. Created with ${TextFormat.GOLD}Kotlin.")
     }
 
@@ -51,20 +48,6 @@ class BuildToModel : PluginBase() {
         var limit = true
         var modelId = hashMapOf<String,String>()
         var s1: Long = Random().nextLong()
-
-        var abs: Boolean = false
-        var vvv: Boolean = false
-        var sda: Boolean = false // License
-        var dsa: Boolean = false
-
-        @JvmStatic
-        fun a() : Boolean = sda
-
-        @JvmStatic
-        fun b() : Boolean = vvv
-
-        @JvmStatic
-        fun c() : Boolean = dsa
 
         fun init(p: BuildToModel) {
             instance = p
