@@ -1,0 +1,9 @@
+.idea
+logs
+players
+plugins
+worlds
+BuildToModel.iml
+server.log
+target
+out

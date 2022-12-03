@@ -1,0 +1,6 @@
+name: BuildToModel
+main: top.wetabq.buildtomodel.BuildToModel
+version: "1.0.0"
+api: ["1.0.0"]
+load: POSTWORLD
+author: WetABQ
